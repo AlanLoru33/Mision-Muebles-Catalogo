@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión Mueble | Diseño & Forja Industrial</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&family=Montserrat:wght@100;300;400;700;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS for scroll animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- GLightbox for image lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer base {
+        :root {
+            --naranja: #ff9f1c;
+            --naranja-glow: rgba(255, 159, 28, 0.7);
+            --negro-profundo: #020202;
+            --negro-taller: #0a0a0a;
+            --blanco: #ffffff;
+            --crema-claro: #fcfcfc;
+            --font-industrial: 'Syncopate', sans-serif;
+            --font-title: 'Oswald', sans-serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { 
+          @apply bg-[var(--negro-profundo)] text-[var(--crema-claro)] font-[var(--font-body)] overflow-x-hidden; 
+        }
+        
+        h1, h2, h3, h4, h5, h6 { @apply font-[var(--font-title)]; }
+
+        /* Reading Progress Bar */
+        #scroll-progress {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 0%;
+          height: 3px;
+          background: linear-gradient(to right, var(--naranja), #fff);
+          z-index: 100;
+          transition: width 0.1s ease;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-15px) scale(1.02); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--negro-profundo); }
+        ::-webkit-scrollbar-thumb { 
+          background: var(--naranja); 
+          border-radius: 10px;
+          border: 1px solid var(--negro-profundo);
+        }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'naranja': '#ff9f1c',
+              'negro-profundo': '#020202',
+              'negro-taller': '#0a0a0a',
+              'blanco': '#ffffff',
+              'bronce': '#cd7f32',
+              'verde-exito': '#22c55e'
+            },
+            fontFamily: {
+              industrial: ['Syncopate', 'sans-serif'],
+              title: ['Oswald', 'sans-serif'],
+              body: ['Montserrat', 'sans-serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 20s linear infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+      
+      // Update progress bar
+      window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("scroll-progress").style.width = scrolled + "%";
+      };
+    </script>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/Mision-Mueble-EMA/assets/index-BzVq67uC.js"></script>
+</head>
+<body>
+    <div id="scroll-progress"></div>
+    <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>
