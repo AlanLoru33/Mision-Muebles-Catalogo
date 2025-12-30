@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   // Debe coincidir EXACTAMENTE con el nombre de tu repositorio actual en GitHub
-  base: './Mision-Muebles-Catalogo/', 
+  base: '/Mision-Muebles-Catalogo/', 
 });
