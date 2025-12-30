@@ -20,7 +20,7 @@ Crear una plataforma de exhibición profesional, optimizada para dispositivos m�
 
 ## 📸 Vista Previa
 > [!TIP]
-> Puedes ver el sitio en vivo aquí: https://alanloru33.github.io/Mision-Mueble-EMA/
+> Puedes ver el sitio en vivo aquí: https://alanloru33.github.io/Mision-Muebles-Catalogo/
 
 ---
 **Desarrollo Web por:** AlanLoru33 
