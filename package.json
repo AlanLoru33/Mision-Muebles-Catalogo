@@ -1,0 +1,39 @@
+{
+  "name": "mision-mueble",
+  "version": "1.0.0",
+  "description": "Catálogo premium de muebles industriales - Hierro y Madera maciza.",
+  "homepage": "https://AlanLoru33.github.io/Mision-Mueble-EMA",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanLoru33/Mision-Mueble-EMA.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [
+    "react",
+    "industrial-design",
+    "furniture",
+    "ecommerce",
+    "tailwind"
+  ],
+  "author": "Alan Luciano Loru",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}
